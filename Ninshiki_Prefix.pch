@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'Ninshiki' target in the 'Ninshiki' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#define kIdleTimeDefaultKey @"idleTime"
+#define kNotifyTimeDefaultKey @"notifyTime"
+#define kSoundFilePathDefaultKey @"soundFilePath"
