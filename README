@@ -1,8 +1,8 @@
 Ninshiki
 ========
 
-Ninshiki is a clone of http://iamfutureproof.com/tools/awareness/ exept it's
-open-source, more configurable, and doesn't require a menaged runtime that 
+Ninshiki is a clone of http://iamfutureproof.com/tools/awareness/ except it's
+open-source, more configurable, and doesn't require a managed runtime that 
 takes up 25 MB of memory.
 
 It is an OS X Status Bar Applet that displays how long you've been 
@@ -10,7 +10,7 @@ using your computer and plays a sound to remind you when you've been using
 it for too long without a break.
 
 The time that you consider to be a break and how long between reminders is
-configurable by using the Preferences window accessable from the Status Item
+configurable by using the Preferences window accessible from the Status Item
 once you run the program.
 
 Licenses
@@ -18,7 +18,7 @@ Licenses
 
 Ninshiki source code is licensed under the GNU GPL version 3. 
 
-The default Tibetian Singing Bell sound is from Freesound.org and is
+The default Tibetan Singing Bell sound is from Freesound.org and is
 Copyright Garuda1982 and licensed under a Creative Commons Sampling Plus
 1.0 License.  http://creativecommons.org/licenses/sampling+/1.0/
 
