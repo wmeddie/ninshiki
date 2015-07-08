@@ -35,7 +35,7 @@ int64_t SystemIdleTime();
         [NSDictionary dictionaryWithObjectsAndKeys:
             [NSNumber numberWithInt:5], kIdleTimeDefaultKey, 
             [NSNumber numberWithInt:60], kNotifyTimeDefaultKey,
-            true, kPlayAtStartDefaultKey,
+            [NSNumber numberWithInt:1], kPlayAtStartDefaultKey,
             @"", kSoundFilePathDefaultKey, nil];
     
     [[NSUserDefaults standardUserDefaults]  registerDefaults:defaults];

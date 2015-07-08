@@ -87,7 +87,9 @@
 
 - (void)setPlayAtStart:(Boolean *)value {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:value forKey:kPlayAtStartDefaultKey];
+    
+    NSNumber *valNum = [NSNumber numberWithBool:value];
+    [defaults setObject:valNum forKey:kPlayAtStartDefaultKey];
     [defaults synchronize];
 }
 
