@@ -1,7 +1,7 @@
 /*
  PreferencesWindowController.h
  
- Ninshiki A program to remind you when you've been working to long.
+ AssTracker A program to remind you when you've been working to long.
  Copyright (C) 2011 Eduardo Gonzalez
  
  This program is free software: you can redistribute it and/or modify
@@ -23,14 +23,16 @@
 
 @interface PreferencesWindowController : NSWindowController<NSWindowDelegate> {
   @private
-    NSTextField *notifyTimeTextField_;
-    NSTextField *idleTimeTextField_;
+    NSTextField *__strong notifyTimeTextField_;
+    NSTextField *__strong idleTimeTextField_;
 }
 
-@property (assign) IBOutlet NSTextField *notifyTimeTextField;
-@property (assign) IBOutlet NSTextField *idleTimeTextField;
+@property (strong) IBOutlet NSTextField *notifyTimeTextField;
+@property (strong) IBOutlet NSTextField *idleTimeTextField;
+@property (strong) IBOutlet NSButton *playAtStartButton;
 @property (copy) NSNumber *notifyTime;
 @property (copy) NSNumber *idleTime;
+@property Boolean *playAtStart;
 
 
 + (PreferencesWindowController *)sharedPreferences;

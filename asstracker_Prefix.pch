@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'Ninshiki' target in the 'Ninshiki' project
+// Prefix header for all source files of the 'AssTracker' target in the 'AssTracker' project
 //
 
 #ifdef __OBJC__
@@ -8,4 +8,5 @@
 
 #define kIdleTimeDefaultKey @"idleTime"
 #define kNotifyTimeDefaultKey @"notifyTime"
+#define kPlayAtStartDefaultKey @"playAtStart"
 #define kSoundFilePathDefaultKey @"soundFilePath"

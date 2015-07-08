@@ -1,7 +1,7 @@
 /*
- NinshikiAppDelegate.m
+ AssTrackerAppDelegate.m
  
- Ninshiki A program to remind you when you've been working to long.
+ AssTracker A program to remind you when you've been working to long.
  Copyright (C) 2011 Eduardo Gonzalez
  
  This program is free software: you can redistribute it and/or modify
@@ -18,11 +18,11 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "NinshikiAppDelegate.h"
+#import "AssTrackerAppDelegate.h"
 
 int64_t SystemIdleTime();
 
-@implementation NinshikiAppDelegate
+@implementation AssTrackerAppDelegate
 
 @synthesize statusItem = statusItem_;
 @synthesize statusMenu = statusMenu_;
@@ -34,7 +34,8 @@ int64_t SystemIdleTime();
     NSDictionary *defaults = 
         [NSDictionary dictionaryWithObjectsAndKeys:
             [NSNumber numberWithInt:5], kIdleTimeDefaultKey, 
-            [NSNumber numberWithInt:60], kNotifyTimeDefaultKey, 
+            [NSNumber numberWithInt:60], kNotifyTimeDefaultKey,
+            [NSNumber numberWithInt:1], kPlayAtStartDefaultKey,
             @"", kSoundFilePathDefaultKey, nil];
     
     [[NSUserDefaults standardUserDefaults]  registerDefaults:defaults];
@@ -49,10 +50,11 @@ int64_t SystemIdleTime();
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *soundFilePath = [defaults objectForKey:kSoundFilePathDefaultKey];
+    bool playAtStart = [defaults boolForKey:kPlayAtStartDefaultKey];
+    
     if ((soundFilePath != nil) && ![soundFilePath isEqualToString:@""]) {
         self.notifySound = [[NSSound alloc] initWithContentsOfFile:soundFilePath
                                                        byReference:NO];
-        
     }
     
     if (self.notifySound == nil) {
@@ -62,7 +64,9 @@ int64_t SystemIdleTime();
                                         byReference:NO];
     }
     
-    [self.notifySound play];
+    if (playAtStart == true) {
+        [self.notifySound play];
+    }
     
     self.timer = [NSTimer timerWithTimeInterval:60
                                          target:self
@@ -74,13 +78,12 @@ int64_t SystemIdleTime();
 }
 
 - (void)updateStatusItem {
-    
     if (self.minutes < 60) {
         [self.statusItem setTitle:[NSString stringWithFormat:@"%dm", 
-                                   self.minutes]];
+                                   (int)self.minutes]];
     } else {
         [self.statusItem setTitle:[NSString stringWithFormat:@"%dh %dm", 
-                                   (self.minutes / 60), (self.minutes % 60)]];
+                                   (int)(self.minutes / 60), (int)(self.minutes % 60)]];
     }
 }
 
