@@ -1,7 +1,7 @@
-Ninshiki
+AssTracker
 ========
 
-Ninshiki is a clone of http://iamfutureproof.com/tools/awareness/ except it's
+AssTracker is a clone of http://iamfutureproof.com/tools/awareness/ except it's
 open-source, more configurable, and doesn't require a managed runtime that 
 takes up 25 MB of memory.
 
@@ -16,7 +16,7 @@ once you run the program.
 Licenses
 --------
 
-Ninshiki source code is licensed under the GNU GPL version 3. 
+AssTracker source code is licensed under the GNU GPL version 3. 
 
 The default Tibetan Singing Bell sound is from Freesound.org and is
 Copyright Garuda1982 and licensed under a Creative Commons Sampling Plus

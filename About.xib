@@ -36,7 +36,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{477, 314}, {313, 114}}</string>
 				<int key="NSWTFlags">611845120</int>
-				<string key="NSWindowTitle">About Ninshiki</string>
+				<string key="NSWindowTitle">About asstracker</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
@@ -55,7 +55,7 @@
 							<object class="NSTextFieldCell" key="NSCell" id="475241680">
 								<int key="NSCellFlags">68157504</int>
 								<int key="NSCellFlags2">138413056</int>
-								<string key="NSContents">Annoyatron (originally Ninshiki)</string>
+								<string key="NSContents">asstracker</string>
 								<object class="NSFont" key="NSSupport">
 									<bool key="IBIsSystemFont">YES</bool>
 									<double key="NSSize">15</double>

@@ -2,7 +2,7 @@
  
  main.m
  
- Ninshiki A program to remind you when you've been working to long.
+ AssTracker A program to remind you when you've been working to long.
  Copyright (C) 2011 Eduardo Gonzalez
  
  This program is free software: you can redistribute it and/or modify

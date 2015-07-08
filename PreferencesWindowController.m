@@ -1,7 +1,7 @@
 /*
  PreferencesWindowController.m
  
- Ninshiki A program to remind you when you've been working to long.
+ AssTracker A program to remind you when you've been working to long.
  Copyright (C) 2011 Eduardo Gonzalez
  
  This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
  */
 //
 //  PreferencesWindowController.m
-//  Ninshiki
+//  AssTracker
 //
 //  Created by ゴンザレズ エドワルド on 4/27/11.
 //  Copyright 2011 日本ビジネスシステムズ. All rights reserved.

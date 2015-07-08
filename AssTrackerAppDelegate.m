@@ -1,7 +1,7 @@
 /*
- NinshikiAppDelegate.m
+ AssTrackerAppDelegate.m
  
- Ninshiki A program to remind you when you've been working to long.
+ AssTracker A program to remind you when you've been working to long.
  Copyright (C) 2011 Eduardo Gonzalez
  
  This program is free software: you can redistribute it and/or modify
@@ -18,11 +18,11 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#import "NinshikiAppDelegate.h"
+#import "AssTrackerAppDelegate.h"
 
 int64_t SystemIdleTime();
 
-@implementation NinshikiAppDelegate
+@implementation AssTrackerAppDelegate
 
 @synthesize statusItem = statusItem_;
 @synthesize statusMenu = statusMenu_;
@@ -78,7 +78,6 @@ int64_t SystemIdleTime();
 }
 
 - (void)updateStatusItem {
-    
     if (self.minutes < 60) {
         [self.statusItem setTitle:[NSString stringWithFormat:@"%dm", 
                                    (int)self.minutes]];

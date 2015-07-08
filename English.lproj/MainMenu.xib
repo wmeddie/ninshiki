@@ -33,7 +33,7 @@
 				<string key="NSClassName">NSApplication</string>
 			</object>
 			<object class="NSCustomObject" id="976324537">
-				<string key="NSClassName">NinshikiAppDelegate</string>
+				<string key="NSClassName">AssTrackerAppDelegate</string>
 			</object>
 			<object class="NSCustomObject" id="755631768">
 				<string key="NSClassName">NSFontManager</string>
@@ -67,7 +67,7 @@
 					</object>
 					<object class="NSMenuItem" id="312791433">
 						<reference key="NSMenu" ref="491912787"/>
-						<string key="NSTitle">About Annoyatron</string>
+						<string key="NSTitle">About asstracker</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="417133798"/>
