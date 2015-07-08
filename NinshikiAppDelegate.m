@@ -77,10 +77,10 @@ int64_t SystemIdleTime();
     
     if (self.minutes < 60) {
         [self.statusItem setTitle:[NSString stringWithFormat:@"%dm", 
-                                   self.minutes]];
+                                   (int)self.minutes]];
     } else {
         [self.statusItem setTitle:[NSString stringWithFormat:@"%dh %dm", 
-                                   (self.minutes / 60), (self.minutes % 60)]];
+                                   (int)(self.minutes / 60), (int)(self.minutes % 60)]];
     }
 }
 
