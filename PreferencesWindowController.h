@@ -29,8 +29,10 @@
 
 @property (strong) IBOutlet NSTextField *notifyTimeTextField;
 @property (strong) IBOutlet NSTextField *idleTimeTextField;
+@property (strong) IBOutlet NSButton *playAtStartButton;
 @property (copy) NSNumber *notifyTime;
 @property (copy) NSNumber *idleTime;
+@property Boolean *playAtStart;
 
 
 + (PreferencesWindowController *)sharedPreferences;

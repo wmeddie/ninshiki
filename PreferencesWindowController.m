@@ -32,6 +32,7 @@
 
 @synthesize notifyTimeTextField = notifyTimeTextField_;
 @synthesize idleTimeTextField = idleTimeTextField_;
+@synthesize playAtStartButton = playAtStartButton_;
 
 + (PreferencesWindowController *)sharedPreferences {
     
@@ -75,6 +76,18 @@
 - (void)setIdleTime:(NSNumber *)value {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:value forKey:kIdleTimeDefaultKey];
+    [defaults synchronize];
+}
+
+
+- (Boolean *)playAtStart {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:kPlayAtStartDefaultKey];
+}
+
+- (void)setPlayAtStart:(Boolean *)value {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:value forKey:kPlayAtStartDefaultKey];
     [defaults synchronize];
 }
 

@@ -34,7 +34,8 @@ int64_t SystemIdleTime();
     NSDictionary *defaults = 
         [NSDictionary dictionaryWithObjectsAndKeys:
             [NSNumber numberWithInt:5], kIdleTimeDefaultKey, 
-            [NSNumber numberWithInt:60], kNotifyTimeDefaultKey, 
+            [NSNumber numberWithInt:60], kNotifyTimeDefaultKey,
+            true, kPlayAtStartDefaultKey,
             @"", kSoundFilePathDefaultKey, nil];
     
     [[NSUserDefaults standardUserDefaults]  registerDefaults:defaults];
@@ -49,10 +50,11 @@ int64_t SystemIdleTime();
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *soundFilePath = [defaults objectForKey:kSoundFilePathDefaultKey];
+    bool playAtStart = [defaults boolForKey:kPlayAtStartDefaultKey];
+    
     if ((soundFilePath != nil) && ![soundFilePath isEqualToString:@""]) {
         self.notifySound = [[NSSound alloc] initWithContentsOfFile:soundFilePath
                                                        byReference:NO];
-        
     }
     
     if (self.notifySound == nil) {
@@ -62,7 +64,9 @@ int64_t SystemIdleTime();
                                         byReference:NO];
     }
     
-    [self.notifySound play];
+    if (playAtStart == true) {
+        [self.notifySound play];
+    }
     
     self.timer = [NSTimer timerWithTimeInterval:60
                                          target:self

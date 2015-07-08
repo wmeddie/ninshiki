@@ -8,4 +8,5 @@
 
 #define kIdleTimeDefaultKey @"idleTime"
 #define kNotifyTimeDefaultKey @"notifyTime"
+#define kPlayAtStartDefaultKey @"playAtStart"
 #define kSoundFilePathDefaultKey @"soundFilePath"
