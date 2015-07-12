@@ -23,12 +23,12 @@
 
 @interface PreferencesWindowController : NSWindowController<NSWindowDelegate> {
   @private
-    NSTextField *notifyTimeTextField_;
-    NSTextField *idleTimeTextField_;
+    NSTextField *__strong notifyTimeTextField_;
+    NSTextField *__strong idleTimeTextField_;
 }
 
-@property (assign) IBOutlet NSTextField *notifyTimeTextField;
-@property (assign) IBOutlet NSTextField *idleTimeTextField;
+@property (strong) IBOutlet NSTextField *notifyTimeTextField;
+@property (strong) IBOutlet NSTextField *idleTimeTextField;
 @property (copy) NSNumber *notifyTime;
 @property (copy) NSNumber *idleTime;
 

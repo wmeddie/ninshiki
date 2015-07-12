@@ -27,18 +27,18 @@
 
 @interface NinshikiAppDelegate : NSObject <NSApplicationDelegate> {
   @private
-    NSStatusItem *statusItem_;
-    NSMenu *statusMenu_;
-    NSTimer *timer_;
+    NSStatusItem *__strong statusItem_;
+    NSMenu *__strong statusMenu_;
+    NSTimer *__strong timer_;
     NSInteger minutes_;
     NSSound *notifySound_;
 }
 
-@property (assign) NSStatusItem *statusItem;
-@property (assign) IBOutlet NSMenu *statusMenu;
-@property (assign) NSTimer *timer;
+@property (strong) NSStatusItem *statusItem;
+@property (strong) IBOutlet NSMenu *statusMenu;
+@property (strong) NSTimer *timer;
 @property (assign) NSInteger minutes;
-@property (assign) NSSound *notifySound;
+@property (strong) NSSound *notifySound;
 
 - (IBAction)showPreferences:(id)sender;
 - (IBAction)showAbout:(id)sender;
